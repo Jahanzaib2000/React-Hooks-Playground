@@ -1,0 +1,85 @@
+/* ==========================================================================
+   use Hook: Dual-Lane Timeline Sandbox (Without use vs With use)
+   ========================================================================== */
+
+.use-sandbox-root {
+  box-sizing: border-box;
+}
+
+/* Top Controls Toolbar */
+
+.use-timeline-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 8px 14px;
+  background: #121215;
+  border: 1px solid #27272a;
+  border-radius: 6px;
+}
+
+.use-control-btn {
+  background: #18181b;
+  border: 1px solid #27272a;
+  color: #e4e4e7;
+  font-size: 11.5px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.use-control-btn:hover:not(:disabled) {
+  background: #27272a;
+  color: #ffffff;
+  border-color: #3f3f46;
+}
+
+.use-control-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.use-control-btn.play-btn {
+  background: #27272a;
+  color: #fafafa;
+  font-weight: 600;
+  border-color: #3f3f46;
+}
+
+.use-control-btn.play-btn:hover:not(:disabled) {
+  background: #3f3f46;
+}
+
+.use-control-btn.reset-btn {
+  color: #a1a1aa;
+}
+
+.use-scrubber-label {
+  font-size: 11px;
+  color: #71717a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.use-timeline-slider {
+  width: 120px;
+  accent-color: #fafafa;
+  cursor: pointer;
+}
+
+.use-phase-pill {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: #fafafa;
+  background: #18181b;
+  border: 1px solid #27272a;
+  padding: 3px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+}

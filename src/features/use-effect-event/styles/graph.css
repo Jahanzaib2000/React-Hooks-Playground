@@ -1,0 +1,187 @@
+/* Tree Arena */
+
+.uee-tree-arena {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: #0f0f12;
+  border: 1px solid #27272a;
+  border-radius: var(--radius-md);
+  padding: 24px 20px 20px 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Root Node: useEffect */
+
+.uee-root-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 3;
+}
+
+.uee-node-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: #18181b;
+  border: 1.5px solid #3f3f46;
+  border-radius: var(--radius-md);
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  max-width: 460px;
+  width: 100%;
+  text-align: center;
+}
+
+.uee-node-root:hover {
+  border-color: #fafafa;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.08);
+}
+
+.uee-node-tag {
+  font-size: 9.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: #27272a;
+  border: 1px solid #3f3f46;
+  color: #fafafa;
+  padding: 2px 7px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+
+.uee-click-hint {
+  font-size: 10.5px;
+  color: #71717a;
+  font-family: var(--font-mono);
+}
+
+.uee-root-code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: #fafafa;
+  letter-spacing: 0.01em;
+}
+
+/* SVG Connector Lines */
+
+.uee-svg-canvas-wrapper {
+  width: 100%;
+  max-width: 600px;
+  height: 44px;
+  margin: -2px 0;
+  z-index: 1;
+}
+
+.uee-branch-line {
+  stroke: #3f3f46;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.uee-branch-dot {
+  fill: #71717a;
+}
+
+/* Dependency Nodes Row */
+
+.uee-deps-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 640px;
+  gap: 16px;
+  z-index: 2;
+}
+
+.uee-dep-column {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.uee-dep-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.uee-dep-card.clickable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.uee-dep-card.clickable:hover {
+  border-color: #fafafa;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
+}
+
+.uee-dep-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 4px;
+}
+
+.uee-dep-click-hint {
+  font-size: 8.5px;
+  color: #71717a;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.uee-dep-card.special-theme {
+  border-color: #3f3f46;
+  background: #1a1a1e;
+}
+
+.uee-dep-card.special-theme.clickable.isolated:hover {
+  border-color: #fafafa;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.1);
+}
+
+.uee-dep-type {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #71717a;
+  letter-spacing: 0.05em;
+}
+
+.uee-dep-name,
+.uee-compare-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fafafa;
+  font-family: var(--font-mono);
+}
+
+.uee-dep-val {
+  font-size: 10.5px;
+  color: #a1a1aa;
+  font-family: var(--font-mono);
+}

@@ -1,0 +1,100 @@
+/* ==========================================================================
+   useOptimistic Playground Components
+   ========================================================================== */
+
+/* Server Toggle Panel */
+
+.server-toggle-panel {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  margin-bottom: 14px;
+}
+
+.server-toggle-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.server-toggle-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--salt-dim);
+}
+
+.server-switch-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.server-hint-text {
+  font-size: 11px;
+  color: var(--salt-dim);
+  flex: 1;
+  text-align: right;
+  min-width: 220px;
+}
+
+/* Chameleon Arena */
+
+.chameleon-arena {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  position: relative;
+}
+
+.chameleon-btn {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  padding: 16px 24px;
+  border-radius: var(--radius-lg);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.25s ease, background-color 0.2s ease;
+  overflow: hidden;
+}
+
+.chameleon-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.chameleon-btn:active {
+  transform: translateY(1px);
+}
+
+.chameleon-btn.pending {
+  animation: chameleon-subtle-pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes chameleon-subtle-pulse {
+
+  0%,
+  100% {
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  50% {
+    border-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 24px rgba(255, 255, 255, 0.35);
+  }
+}
+
+.chameleon-btn-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+}

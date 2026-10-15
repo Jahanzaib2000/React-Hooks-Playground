@@ -1,0 +1,96 @@
+/* ==========================================================================
+   Unique ID Dependency & Wiring Inspector (Hub & Wire Graph)
+   ========================================================================== */
+
+.id-wiring-inspector-dock {
+  margin-bottom: 16px;
+  padding: 16px 20px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.id-wiring-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--salt-pure);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.id-wiring-subtitle {
+  font-size: 12.5px;
+  color: var(--salt-silver);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.id-wiring-subtitle strong {
+  color: var(--salt-pure);
+}
+
+.id-wiring-proof-banner {
+  margin-top: 8px;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  animation: uidCardIn 0.2s ease-out;
+}
+
+.id-wiring-proof-banner.success {
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.5);
+  color: #86efac;
+}
+
+.id-wiring-proof-banner.collision {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.6);
+  color: #fca5a5;
+}
+
+.id-wiring-proof-banner.warning {
+  background: rgba(234, 179, 8, 0.12);
+  border: 1px solid rgba(234, 179, 8, 0.5);
+  color: #fde047;
+}
+
+.banner-close {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0 4px;
+  opacity: 0.7;
+}
+
+.banner-close:hover {
+  opacity: 1;
+}
+
+.id-wiring-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+.id-wiring-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 24px;
+  color: var(--salt-dim);
+  font-size: 13px;
+}

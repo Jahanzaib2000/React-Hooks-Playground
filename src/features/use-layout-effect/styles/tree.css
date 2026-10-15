@@ -1,0 +1,107 @@
+.lifecycle-tree-card {
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: var(--radius-md, 10px);
+  padding: 18px 18px 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.32);
+  position: relative;
+  min-height: 380px;
+}
+
+.tree-header-badge {
+  align-self: flex-start;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  background: #121215;
+  color: #fafafa;
+  border: 1px solid #27272a;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+.lifecycle-tree-spine {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tree-row-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 38px;
+}
+
+.tree-arrow-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 20px;
+}
+
+.tree-visual-cell {
+  width: 204px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.tree-card-layout-effect .tree-visual-cell {
+  width: 304px;
+}
+
+.tree-trunk-cell {
+  width: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.tree-branch-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.tree-branch-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tree-branch-arrow.arrow-active-green {
+  color: #22c55e;
+  filter: drop-shadow(0 0 6px rgba(34, 197, 94, 0.85));
+  transform: scale(1.1);
+}
+
+.tree-branch-arrow.arrow-active-peach {
+  color: #f59e0b;
+  filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.85));
+  transform: scale(1.1);
+}
+
+.tree-annotation-cell {
+  flex: 1;
+  min-width: 130px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  box-sizing: border-box;
+}
+
+.tree-annotation-slot {
+  display: flex;
+  align-items: center;
+  min-height: 28px;
+}

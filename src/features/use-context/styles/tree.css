@@ -1,0 +1,146 @@
+/* =========================================================================
+   USECONTEXT 3-LAYER COMPONENT TREE PLAYGROUND (LESSON 02)
+   ========================================================================= */
+
+.context-tree-playground-root {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 24px;
+  width: 100%;
+  position: relative;
+  align-items: start;
+  box-sizing: border-box;
+}
+
+.context-tree-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+
+.tree-root-container .tree-node-box {
+  width: 340px;
+  max-width: 100%;
+}
+
+.tree-root-fork-lane {
+  width: 100%;
+  height: 38px;
+  position: relative;
+}
+
+.tree-branches-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+}
+
+.tree-branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+}
+
+.tree-branch .tree-node-box {
+  width: 100%;
+}
+
+.tree-branch-fork-lane {
+  width: 100%;
+  height: 34px;
+  position: relative;
+}
+
+.tree-leaf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+}
+
+.tree-node-box,
+.tree-leaf-box {
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: none !important;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.tree-leaf-box {
+  padding: 10px 12px;
+  min-height: 84px;
+}
+
+.context-box-name {
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin: 0;
+  font-size: 13px;
+}
+
+.tree-leaf-box .context-box-name {
+  font-size: 12px;
+}
+
+.tree-leaf-box .context-box-desc {
+  font-size: 11px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.tree-btn-pair {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  margin-top: 4px;
+}
+
+/* Light Theme Overrides for Tree Buttons */
+
+.tree-toggle-theme-btn {
+  padding: 3px 9px;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 9999px;
+  cursor: pointer;
+  background: #27272a;
+  border: 1px solid #3f3f46;
+  color: #fafafa;
+  transition: all 0.2s ease;
+  font-family: var(--font-mono);
+}
+
+.tree-toggle-theme-btn:hover:not(:disabled) {
+  background: #3f3f46;
+  transform: scale(1.04);
+}
+
+.tree-toggle-theme-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.context-box-item.theme-light .tree-toggle-theme-btn {
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  color: #b45309;
+}
+
+.context-box-item.theme-light .tree-toggle-theme-btn:hover:not(:disabled) {
+  background: #fde68a;
+}

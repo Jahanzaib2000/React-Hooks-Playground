@@ -1,0 +1,106 @@
+/* Main Timeline Arena */
+
+.use-timeline-arena {
+  background: #09090b;
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-sizing: border-box;
+}
+
+/* Time Axis Row */
+
+.use-axis-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border-bottom: 1px solid #27272a;
+  padding-bottom: 10px;
+}
+
+.use-axis-corner-label {
+  width: 110px;
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: #71717a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.use-axis-grid,
+.use-lane-blocks-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.use-axis-tick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.use-axis-tick:hover {
+  background: rgba(39, 39, 42, 0.4);
+}
+
+.use-tick-marker {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #27272a;
+  border: 1px solid #3f3f46;
+  transition: all 0.2s ease;
+}
+
+.use-tick-title {
+  font-size: 11.5px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: #71717a;
+  transition: color 0.15s ease;
+}
+
+.use-tick-desc {
+  font-size: 10px;
+  color: #52525b;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.use-axis-tick.active-tick .use-tick-marker {
+  background: #fafafa;
+  border-color: #ffffff;
+  box-shadow: 0 0 10px rgba(250, 250, 250, 0.65);
+}
+
+.use-axis-tick.active-tick .use-tick-title {
+  color: #fafafa;
+}
+
+.use-axis-tick.active-tick .use-tick-desc {
+  color: #d4d4d8;
+}
+
+.use-axis-tick.completed-tick .use-tick-marker {
+  background: #71717a;
+  border-color: #a1a1aa;
+}
+
+.use-axis-tick.completed-tick .use-tick-title {
+  color: #a1a1aa;
+}

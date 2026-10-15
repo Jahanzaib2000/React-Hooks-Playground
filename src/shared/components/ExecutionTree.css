@@ -1,0 +1,79 @@
+/* Execution Tree (Component & Hook Functions) */
+
+/* Event Sequence Flow (Component & Hook Lifecycle Events) */
+
+.execution-tree-container {
+  padding: 24px;
+  background: var(--bg-deep);
+  font-family: var(--font-mono);
+  height: 218px;
+  min-height: 218px;
+  max-height: 218px;
+  overflow-y: auto;
+  overflow-x: auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.event-flow-chain {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.event-step-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--salt-pure);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.event-step-pill:hover {
+  border-color: var(--border-salt);
+  background: var(--bg-elevated);
+  transform: translateY(-1px);
+}
+
+.event-step-pill.trigger {
+  border-left: 3px solid var(--salt-pure);
+}
+
+.event-step-pill.component {
+  border-left: 3px solid var(--salt-silver);
+}
+
+.event-step-pill.hook {
+  border-left: 3px solid var(--salt-chalk);
+}
+
+.event-step-pill.commit {
+  border-left: 3px solid var(--salt-muted);
+}
+
+.event-step-pill.effect {
+  border-left: 3px solid var(--salt-dim);
+}
+
+.event-step-arrow {
+  color: var(--salt-dim);
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 700;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2px;
+}

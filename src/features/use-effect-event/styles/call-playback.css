@@ -1,0 +1,152 @@
+/* Call Content */
+
+.uee-call-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  padding: 8px 0;
+  flex: 1;
+}
+
+.uee-call-room-pill {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+/* Equalizer Waveform */
+
+.uee-equalizer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  height: 30px;
+  width: 100%;
+  padding: 2px 0;
+}
+
+.uee-eq-bar {
+  width: 4px;
+  border-radius: 2px;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+.uee-equalizer.active .uee-eq-bar {
+  opacity: 0.9;
+  animation: uee-bounce 1.2s infinite ease-in-out;
+}
+
+.uee-equalizer.active .uee-eq-bar:nth-child(1) { height: 14px; animation-delay: 0.0s; }
+
+.uee-equalizer.active .uee-eq-bar:nth-child(2) { height: 26px; animation-delay: 0.2s; }
+
+.uee-equalizer.active .uee-eq-bar:nth-child(3) { height: 18px; animation-delay: 0.4s; }
+
+.uee-equalizer.active .uee-eq-bar:nth-child(4) { height: 30px; animation-delay: 0.1s; }
+
+.uee-equalizer.active .uee-eq-bar:nth-child(5) { height: 20px; animation-delay: 0.5s; }
+
+.uee-equalizer.active .uee-eq-bar:nth-child(6) { height: 12px; animation-delay: 0.3s; }
+
+.uee-equalizer.paused .uee-eq-bar {
+  height: 4px !important;
+  opacity: 0.25;
+  animation: none;
+}
+
+@keyframes uee-bounce {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+
+/* Timer Display */
+
+.uee-timer-display-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.uee-timer-label {
+  font-size: 9.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+  font-family: var(--font-mono);
+}
+
+.uee-timer-digits {
+  font-size: 34px;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.uee-timer-digits.restarting {
+  color: #f59e0b;
+}
+
+/* Call Status Pill */
+
+.uee-call-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(125, 125, 125, 0.12);
+}
+
+.uee-status-indicator-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
+}
+
+.uee-status-indicator-dot.reconnecting {
+  background: #f59e0b;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
+}
+
+/* Footer Metrics inside card */
+
+.uee-call-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid rgba(125, 125, 125, 0.15);
+  font-size: 11px;
+  font-family: var(--font-mono);
+  opacity: 0.85;
+}
+
+.uee-call-stat-highlight {
+  font-weight: 700;
+}
+
+.uee-call-stat-highlight.stat-bad {
+  color: #ef4444;
+}
+
+.uee-call-stat-highlight.stat-good {
+  color: #22c55e;
+}
+
+@media (max-width: 680px) {
+  .uee-calls-grid {
+    grid-template-columns: 1fr;
+  }
+}

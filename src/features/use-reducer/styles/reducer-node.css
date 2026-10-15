@@ -1,0 +1,121 @@
+.cart-box-container.reducer-node-box {
+  width: 100%;
+  min-height: 85px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 6px;
+  background: #121215;
+  border: 1.5px solid #3f3f46;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  position: relative;
+  transition: all 0.25s ease;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.reducer-node-box.reducer-active-pulse {
+  border-color: #fafafa;
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.25), inset 0 0 12px rgba(255, 255, 255, 0.1);
+  transform: scale(1.06);
+}
+
+.reducer-node-box.reducer-remove-pulse {
+  border-color: #f87171;
+  box-shadow: 0 0 28px rgba(248, 113, 113, 0.7), inset 0 0 16px rgba(248, 113, 113, 0.3);
+  transform: scale(1.06);
+}
+
+.reducer-node-title {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #fafafa;
+  text-align: center;
+}
+
+.reducer-node-status {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--salt-dim);
+  margin-top: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.reducer-node-status.active {
+  color: #fafafa;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.reducer-node-status.remove-active {
+  color: #f87171;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(248, 113, 113, 0.9);
+}
+
+.reducer-node-socket {
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #18181b;
+  border: 2px solid #52525b;
+  transform: translateY(-50%);
+}
+
+.reducer-node-socket.socket-left {
+  left: -5px;
+}
+
+.reducer-node-socket.socket-right {
+  right: -5px;
+}
+
+.reducer-node-socket.socket-top-left {
+  top: -5px;
+  left: 25%;
+  transform: translateX(-50%);
+  border-color: #52525b;
+  transition: all 0.2s ease;
+}
+
+.reducer-node-socket.socket-top-left.socket-active-add {
+  background: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.reducer-node-socket.socket-top-right {
+  top: -5px;
+  left: 75%;
+  transform: translateX(-50%);
+  border-color: #f87171;
+  transition: all 0.2s ease;
+}
+
+.reducer-node-socket.socket-top-right.socket-active-remove {
+  background: #f87171;
+  box-shadow: 0 0 10px #f87171;
+}
+
+.reducer-node-socket.socket-bottom {
+  bottom: -5px;
+  left: 50%;
+  top: auto;
+  transform: translateX(-50%);
+  border-color: #f87171;
+  transition: all 0.2s ease;
+}
+
+.reducer-node-socket.socket-bottom.socket-active {
+  background: #f87171;
+  box-shadow: 0 0 10px #f87171;
+}

@@ -1,0 +1,145 @@
+/* Timeline useId (Input name) -> (unique ID) list */
+
+.timeline-uid-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 5px 7px;
+  box-sizing: border-box;
+  max-height: 98px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+}
+
+.timeline-uid-row-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  padding: 2px 4px;
+  border-radius: 3px;
+  background: var(--bg-deep);
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.timeline-uid-row-item.is-new {
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.timeline-uid-input-name {
+  color: var(--salt-silver);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.timeline-uid-arrow {
+  color: var(--salt-dim);
+  font-size: 10px;
+  flex-shrink: 0;
+}
+
+.timeline-uid-val {
+  color: var(--salt-pure);
+  font-weight: 700;
+  font-family: var(--font-mono);
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.timeline-uid-val.duplicate {
+  color: #fca5a5;
+}
+
+.timeline-uid-val.unstable {
+  color: #fde047;
+}
+
+.timeline-uid-row-item .m-new-tag {
+  font-size: 8px;
+  font-weight: 800;
+  padding: 0 4px;
+  border-radius: 2px;
+  background: var(--salt-pure);
+  color: var(--bg-deep);
+  letter-spacing: 0.05em;
+  margin-left: 2px;
+}
+
+.timeline-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--salt-pure);
+  white-space: nowrap;
+}
+
+.timeline-trigger-badge {
+  font-size: 9px;
+  padding: 1px 5px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-subtle);
+  color: var(--salt-muted);
+  text-transform: uppercase;
+  max-width: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.timeline-state-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 6px 8px;
+  box-sizing: border-box;
+}
+
+.timeline-state-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11.5px;
+  font-family: var(--font-mono);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.state-label {
+  color: var(--salt-dim);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+.state-val {
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.state-val.current-val {
+  color: var(--salt-pure);
+  font-weight: 700;
+}
+
+.state-val.prev-val {
+  color: var(--salt-silver);
+}

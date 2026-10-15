@@ -1,0 +1,103 @@
+/* =========================================================================
+   USELAYOUTEFFECT PLAYGROUND: SPECIAL WORKSPACE LAYOUT (EXPANDED SANDBOX)
+   ========================================================================= */
+
+.workspace-grid.layout-effect-workspace {
+  grid-template-columns: 28% 72%;
+  align-items: start;
+}
+
+.left-pane.layout-effect-code-pane {
+  height: auto;
+}
+
+.left-pane.layout-effect-code-pane .panel-card {
+  height: auto;
+  max-height: 440px;
+}
+
+.right-pane.layout-effect-sandbox-pane {
+  width: 100%;
+}
+
+.layout-effect-workspace .layout-effect-playground-root {
+  max-width: 100%;
+  width: 100%;
+}
+
+.layout-effect-workspace .layout-tree-grid {
+  grid-template-columns: minmax(320px, 1fr) minmax(430px, 1.25fr);
+  gap: 20px;
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .workspace-grid.layout-effect-workspace {
+    grid-template-columns: 32% 68%;
+  }
+}
+
+@media (max-width: 880px) {
+  .workspace-grid.layout-effect-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .layout-effect-workspace .layout-tree-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.layout-effect-playground-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.layout-render-btn {
+  padding: 10px 42px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  border-radius: var(--radius-xs, 6px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #fafafa;
+  color: #09090b;
+  border: 1px solid #e4e4e7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.layout-render-btn:hover:not(:disabled) {
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.layout-render-btn:disabled {
+  background: #27272a;
+  color: #71717a;
+  border-color: #27272a;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.layout-tree-grid {
+  display: grid;
+  grid-template-columns: minmax(330px, 1fr) minmax(430px, 1.25fr);
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 880px) {
+  .layout-tree-grid {
+    grid-template-columns: 1fr;
+  }
+}

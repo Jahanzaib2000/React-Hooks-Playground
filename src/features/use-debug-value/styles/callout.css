@@ -1,0 +1,123 @@
+/* Callout Arrow Widget */
+
+.udv-callout-arrow-widget {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 6px;
+  max-width: 290px;
+}
+
+.udv-callout-arrow-pointer {
+  color: #fafafa;
+  font-size: 12px;
+  line-height: 1;
+  user-select: none;
+}
+
+.udv-callout-card {
+  background: #18181b;
+  border: 1px solid #3f3f46;
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.udv-callout-tag {
+  align-self: flex-start;
+  background: #fafafa;
+  color: #09090b;
+  font-size: 9.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 3px;
+  letter-spacing: 0.04em;
+}
+
+.udv-callout-desc {
+  margin: 0;
+  font-size: 10px;
+  color: #d4d4d8;
+  line-height: 1.35;
+  font-family: var(--font-sans);
+}
+
+.udv-callout-desc code {
+  color: #38bdf8;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 1px 3px;
+  border-radius: 2px;
+}
+
+.udv-inspect-footer-note {
+  margin-top: auto;
+  font-size: 9.5px;
+  color: #52525b;
+  padding-top: 8px;
+  border-top: 1px solid #1f1f23;
+}
+
+/* Caption Banner */
+
+.udv-bottom-caption-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px 20px;
+  background: #141417;
+  border: 1px solid #27272a;
+  border-radius: var(--radius-md);
+  margin-top: 4px;
+}
+
+.udv-caption-heading {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fafafa;
+  letter-spacing: -0.01em;
+}
+
+.udv-caption-subtext {
+  margin: 0;
+  font-size: 12px;
+  color: #a1a1aa;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+.udv-caption-subtext code {
+  color: #fafafa;
+  font-family: var(--font-mono);
+  background: #27272a;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 11px;
+}
+
+/* Responsive */
+
+@media (max-width: 960px) {
+  .udv-visual-arena {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .udv-devtools-tree-pane {
+    flex: 0 0 130px;
+  }
+
+  .udv-callout-arrow-widget {
+    margin-left: 0;
+    margin-top: 6px;
+    max-width: 100%;
+  }
+}

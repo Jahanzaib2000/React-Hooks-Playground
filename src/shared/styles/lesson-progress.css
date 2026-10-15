@@ -1,0 +1,113 @@
+/* Step Progression Banner */
+
+.step-banner {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.step-indicators {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 10px;
+}
+
+.step-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-deep);
+  color: var(--salt-dim);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.step-indicator.active {
+  background: var(--bg-subtle);
+  color: var(--salt-pure);
+  border-color: var(--border-salt);
+}
+
+.step-indicator.completed {
+  color: var(--salt-silver);
+  border-color: var(--border-medium);
+}
+
+.step-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.step-prompt {
+  font-size: 14px;
+  color: var(--salt-chalk);
+  max-width: 70%;
+}
+
+.step-prompt strong {
+  color: var(--salt-pure);
+  font-weight: 600;
+}
+
+.predict-options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.predict-opt-btn {
+  background: var(--bg-deep);
+  color: var(--salt-silver);
+  border: 1px solid var(--border-medium);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.predict-opt-btn:hover {
+  background: var(--bg-subtle);
+  color: var(--salt-pure);
+  border-color: var(--border-strong);
+}
+
+.predict-opt-btn.selected-correct {
+  background: #142416;
+  border-color: #3e7845;
+  color: #8ce397;
+}
+
+.predict-opt-btn.selected-wrong {
+  background: #2b1517;
+  border-color: #8c363c;
+  color: #fca5a5;
+}
+
+.feedback-banner {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-family: var(--font-sans);
+  border-left: 3px solid var(--salt-pure);
+  background: var(--bg-deep);
+}

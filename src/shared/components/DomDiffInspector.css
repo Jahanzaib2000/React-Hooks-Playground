@@ -1,0 +1,105 @@
+/* DOM Changes & Diff Tree */
+
+.dom-inspector-container {
+  padding: 16px;
+  background: var(--bg-deep);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  height: 218px;
+  min-height: 218px;
+  max-height: 218px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.dom-diff-summary {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin-bottom: 14px;
+}
+
+.dom-mutation-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.dom-mutation-item:last-child {
+  border-bottom: none;
+}
+
+.mutation-type-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  background: var(--salt-pure);
+  color: var(--bg-deep);
+  text-transform: uppercase;
+}
+
+.mutation-target {
+  color: var(--salt-silver);
+}
+
+.mutation-val-diff {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.val-old {
+  text-decoration: line-through;
+  color: var(--salt-dim);
+}
+
+.val-arrow {
+  color: var(--salt-muted);
+}
+
+.val-new {
+  color: var(--salt-pure);
+  font-weight: 700;
+}
+
+/* Live Visual DOM Tree */
+
+.dom-tree-view {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  line-height: 1.8;
+}
+
+.dom-element-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.dom-element-row.mutated-flash {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.dom-tag {
+  color: var(--salt-silver);
+}
+
+.dom-attr {
+  color: var(--salt-dim);
+}
+
+.dom-text {
+  color: var(--salt-pure);
+  font-weight: 600;
+}

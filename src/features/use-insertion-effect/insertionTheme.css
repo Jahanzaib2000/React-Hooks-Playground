@@ -1,0 +1,38 @@
+/* =========================================================================
+   INSERTION EFFECT THEME (DYNAMICALLY INJECTED)
+   Stored in a separate file to be injected into <head> via useInsertionEffect.
+   Changes the sandbox background to pure white and the font to serif.
+   ========================================================================= */
+
+.insertion-theme-active {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  font-family: Georgia, 'Playfair Display', 'Times New Roman', serif !important;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+.insertion-theme-active .sandbox-display-heading {
+  color: #0f172a !important;
+  font-family: Georgia, 'Playfair Display', serif !important;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.insertion-theme-active .sandbox-display-body {
+  color: #334155 !important;
+  font-family: Georgia, 'Playfair Display', serif !important;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.insertion-theme-active .theme-status-tag {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+  font-family: Georgia, 'Playfair Display', serif !important;
+}
+
+.insertion-theme-active .insertion-preview-inner {
+  border-color: #e2e8f0 !important;
+  background-color: #f8fafc !important;
+}

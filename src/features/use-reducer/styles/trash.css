@@ -1,0 +1,149 @@
+/* Trash Drop Zone (Appears dynamically below useReducer) */
+
+.trash-drop-zone {
+  position: absolute;
+  top: calc(50% + 46px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  z-index: 10;
+  pointer-events: none;
+  animation: trashPopIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.trash-drop-zone.trash-drop-zone-exit {
+  animation: trashFadeOut 0.22s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+@keyframes trashPopIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 14px) scale(0.85);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+@keyframes trashFadeOut {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 14px) scale(0.85);
+  }
+}
+
+.trash-wire-vertical {
+  width: 24px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trash-wire-base {
+  stroke: rgba(248, 113, 113, 0.25);
+  stroke-width: 2.5;
+}
+
+.trash-wire-flow {
+  stroke: #f87171;
+  stroke-width: 2.5;
+  stroke-dasharray: 4 3;
+  animation: wire-flow-down 0.6s linear infinite;
+  filter: drop-shadow(0 0 6px #f87171);
+}
+
+.trash-arrowhead {
+  fill: #f87171;
+  filter: drop-shadow(0 0 6px #f87171);
+}
+
+@keyframes wire-flow-down {
+  0% {
+    stroke-dashoffset: 14;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.trash-box-card {
+  width: 114px;
+  padding: 8px 6px;
+  background: rgba(26, 15, 20, 0.95);
+  border: 2px dashed rgba(248, 113, 113, 0.6);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  box-shadow: 0 4px 18px rgba(239, 68, 68, 0.35), inset 0 0 12px rgba(239, 68, 68, 0.12);
+  position: relative;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.trash-box-card.trash-incinerating {
+  border-style: solid;
+  border-color: #f87171;
+  background: rgba(55, 15, 22, 0.98);
+  box-shadow: 0 0 28px rgba(248, 113, 113, 0.9), inset 0 0 18px rgba(248, 113, 113, 0.5);
+  transform: scale(1.06);
+}
+
+.trash-socket-top {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #0f172a;
+  border: 2px solid #f87171;
+}
+
+.trash-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.trash-icon {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.trash-title {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #fca5a5;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.trash-status-badge {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  color: #f87171;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 1px 5px;
+  border-radius: var(--radius-sm);
+  background: rgba(248, 113, 113, 0.15);
+  border: 1px solid rgba(248, 113, 113, 0.3);
+}

@@ -1,0 +1,45 @@
+/* Option 3: Text State Input Container */
+
+.us-text-display-box {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.us-text-preview {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fafafa;
+  margin-top: 6px;
+  word-break: break-word;
+  min-height: 28px;
+  font-family: var(--font-sans);
+}
+
+.us-text-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.us-text-input-label {
+  font-size: 12px;
+  color: var(--salt-dim);
+  font-weight: 500;
+}
+
+.us-state-text-input {
+  width: 100%;
+  --field-padding: 10px 14px;
+  --field-font-size: 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.us-state-text-input:focus {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.05);
+}
+
+.us-state-text-input::placeholder {
+  color: #52525b;
+}

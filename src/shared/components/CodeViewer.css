@@ -1,0 +1,111 @@
+/* Code Viewer & Interactive Tokens */
+
+.code-canvas {
+  padding: 22px 24px;
+  background: var(--bg-deep);
+  font-family: var(--font-mono);
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--salt-chalk);
+  overflow: auto;
+  position: relative;
+  flex: 1;
+  min-height: 410px;
+  box-sizing: border-box;
+}
+
+.token-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-strong);
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  color: var(--salt-pure);
+  font-size: 14.5px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.token-pill:hover {
+  background: var(--bg-active);
+  border-color: var(--salt-pure);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.token-pill.broken {
+  border-color: rgba(255, 100, 100, 0.5);
+  background: rgba(80, 20, 20, 0.3);
+}
+
+.token-switcher {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.token-option-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-deep);
+  border: 1px solid var(--border-subtle);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.token-option-row:hover {
+  border-color: var(--border-medium);
+  background: var(--bg-subtle);
+}
+
+.token-option-row.active {
+  border-color: var(--border-salt);
+  background: var(--bg-subtle);
+  color: var(--salt-pure);
+}
+
+.tabs-nav {
+  display: flex;
+  background: var(--bg-deep);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 4px 8px 0 8px;
+  gap: 4px;
+}
+
+.tab-link {
+  background: transparent;
+  color: var(--salt-muted);
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-top-left-radius: var(--radius-sm);
+  border-top-right-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.15s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-link:hover {
+  color: var(--salt-silver);
+}
+
+.tab-link.active {
+  color: var(--salt-pure);
+  background: var(--bg-surface);
+  border-bottom: 2px solid var(--salt-pure);
+}

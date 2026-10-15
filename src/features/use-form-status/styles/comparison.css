@@ -1,0 +1,107 @@
+/* Form Comparison Grid for Live Sandbox */
+
+.form-status-comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .form-status-comparison-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-comparison-card {
+  width: 100%;
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.28);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-comparison-card.card-traditional {
+  border: 1.5px solid rgba(239, 68, 68, 0.35);
+}
+
+.form-comparison-card.card-traditional.card-flashing {
+  border-color: #ef4444;
+  box-shadow: 0 0 16px rgba(239, 68, 68, 0.35);
+}
+
+.form-comparison-card.card-optimized {
+  border: 1.5px solid rgba(16, 185, 129, 0.4);
+}
+
+.form-comparison-card.card-optimized.card-flashing {
+  border-color: #10b981;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.35);
+}
+
+.form-efficiency-meter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-radius: var(--radius-xs);
+  font-size: 11px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.form-efficiency-meter.meter-warning {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+}
+
+.form-efficiency-meter.meter-success {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #34d399;
+}
+
+.efficiency-tag {
+  font-size: 10px;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.efficiency-tag.tag-warning {
+  background: rgba(239, 68, 68, 0.25);
+  color: #fca5a5;
+}
+
+.efficiency-tag.tag-success {
+  background: rgba(16, 185, 129, 0.25);
+  color: #a7f3d0;
+}
+
+.submission-origin-badge {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.submission-origin-badge.origin-traditional {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.submission-origin-badge.origin-useformstatus {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}

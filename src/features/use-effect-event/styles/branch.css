@@ -1,0 +1,122 @@
+/* Light Sub-Nodes (Clean Visual Indicator, No Timer Text) */
+
+.uee-light-subnode {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: #141416;
+  border: 1px solid #222226;
+  border-radius: 14px;
+  transition: all 0.25s ease;
+}
+
+.uee-light-bulb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #202024;
+  border: 1.5px solid #2e2e33;
+  transition: all 0.25s ease;
+}
+
+.uee-light-label {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  color: #71717a;
+  font-weight: 600;
+}
+
+.uee-light-subnode.active {
+  border-color: #52525b;
+  background: #1c1917;
+}
+
+.uee-light-subnode.active .uee-light-bulb {
+  background: #fafafa;
+  border-color: #fafafa;
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.8), 0 0 24px rgba(255, 255, 255, 0.35);
+}
+
+.uee-light-subnode.active .uee-light-label {
+  color: #fafafa;
+  font-weight: 700;
+}
+
+/* useEffectEvent Branch Container (Hidden when disconnected) */
+
+.uee-event-branch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.uee-bridge-stem {
+  width: 2px;
+  height: 18px;
+  background: #3f3f46;
+}
+
+.uee-node-event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: #18181b;
+  border: 1.5px solid #52525b;
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.uee-node-event:hover {
+  border-color: #fafafa;
+  transform: translateY(-1px);
+}
+
+.uee-event-tag {
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: #27272a;
+  color: #fafafa;
+  padding: 2px 6px;
+  border-radius: 3px;
+  letter-spacing: 0.04em;
+}
+
+.uee-event-hint {
+  font-size: 9.5px;
+  color: #71717a;
+  font-family: var(--font-mono);
+}
+
+.uee-event-name {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: #fafafa;
+}
+
+.uee-event-fire-btn {
+  background: #27272a;
+  border: 1px solid #3f3f46;
+  color: #fafafa;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.uee-event-fire-btn:hover {
+  background: #3f3f46;
+  border-color: #71717a;
+}

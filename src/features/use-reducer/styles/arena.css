@@ -1,0 +1,159 @@
+/* ==========================================================================
+   useReducer Shopping Cart Arena Styles
+   ========================================================================== */
+
+.cart-playground-root {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (max-width: 860px) {
+  .cart-playground-root {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.cart-box-container {
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: var(--radius-lg);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+  box-sizing: border-box;
+}
+
+.cart-box-container.catalog-box {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.cart-box-container.cart-summary-box {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* Box 3: useReducer Center Column & Node */
+
+.cart-center-column {
+  flex: 0 0 160px;
+  min-width: 140px;
+  max-width: 175px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* 2 Function Buttons above useReducer */
+
+.reducer-functions-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  width: 100%;
+  position: relative;
+  z-index: 4;
+}
+
+.reducer-fn-btn {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 5px 4px;
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: var(--radius-sm);
+  color: var(--salt-silver);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  white-space: nowrap;
+  position: relative;
+  outline: none;
+  user-select: none;
+}
+
+.reducer-fn-btn .fn-tag {
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.reducer-fn-btn.fn-add {
+  color: #fafafa;
+  border-color: #3f3f46;
+}
+
+.reducer-fn-btn.fn-remove {
+  color: #fca5a5;
+  border-color: rgba(248, 113, 113, 0.35);
+}
+
+.reducer-fn-btn:hover:not(:disabled) {
+  background: #27272a;
+  border-color: #52525b;
+  transform: translateY(-1px);
+}
+
+.reducer-fn-btn.fn-add.hook-connected {
+  background: #27272a;
+  border-color: #fafafa;
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.25), inset 0 0 8px rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.reducer-fn-btn.fn-remove.hook-connected {
+  background: rgba(239, 68, 68, 0.25);
+  border-color: #f87171;
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(248, 113, 113, 0.7), inset 0 0 8px rgba(248, 113, 113, 0.4);
+  transform: scale(1.05);
+}
+
+.reducer-fn-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.reducer-fn-btn .fn-socket {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #18181b;
+  border: 1.5px solid #52525b;
+  transition: all 0.2s ease;
+}
+
+.reducer-fn-btn.fn-add.hook-connected .fn-socket {
+  background: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+.reducer-fn-btn.fn-remove.hook-connected .fn-socket {
+  background: #f87171;
+  border-color: #ffffff;
+  box-shadow: 0 0 8px #f87171;
+}

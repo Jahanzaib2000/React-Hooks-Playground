@@ -1,0 +1,56 @@
+/* Bottom Caption Banner */
+
+.uee-bottom-caption-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 14px 18px;
+  background: #141417;
+  border: 1px solid #27272a;
+  border-radius: var(--radius-md);
+}
+
+.uee-caption-heading {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fafafa;
+  letter-spacing: -0.01em;
+}
+
+.uee-caption-subtext {
+  margin: 0;
+  font-size: 11.5px;
+  color: #a1a1aa;
+  max-width: 620px;
+  line-height: 1.4;
+}
+
+.uee-caption-subtext code {
+  color: #fafafa;
+  font-family: var(--font-mono);
+  background: #27272a;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-size: 10.5px;
+}
+
+/* Responsive */
+
+@media (max-width: 720px) {
+  .uee-deps-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .uee-svg-canvas-wrapper {
+    display: none;
+  }
+
+  .uee-dep-column {
+    width: 100%;
+    max-width: 320px;
+  }
+}

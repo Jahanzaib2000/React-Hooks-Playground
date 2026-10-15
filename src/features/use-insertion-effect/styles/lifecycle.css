@@ -1,0 +1,119 @@
+/* Event Chain: React Renders -> useInsertionEffect -> React updates the DOM -> Browser Paints */
+
+.insertion-event-chain {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 2px 0;
+}
+
+.insertion-event-step-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+
+.insertion-event-step-row.step-active {
+  background: #27272a;
+  border-color: #52525b;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.08);
+}
+
+.insertion-event-step-row.step-completed {
+  border-color: rgba(34, 197, 94, 0.4);
+  background: #141f18;
+}
+
+.insertion-step-badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 12px;
+  background: #27272a;
+  color: #a1a1aa;
+  min-width: 18px;
+  text-align: center;
+}
+
+.step-active .insertion-step-badge {
+  background: #f4f4f5;
+  color: #18181b;
+}
+
+.step-completed .insertion-step-badge {
+  background: #22c55e;
+  color: #ffffff;
+}
+
+.insertion-step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.insertion-step-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e4e4e7;
+}
+
+.step-active .insertion-step-name {
+  color: #ffffff;
+}
+
+.step-completed .insertion-step-name {
+  color: #86efac;
+}
+
+.insertion-step-desc {
+  font-size: 11px;
+  color: #a1a1aa;
+}
+
+.step-active .insertion-step-desc {
+  color: #e4e4e7;
+}
+
+.insertion-chain-connector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #52525b;
+  font-size: 11px;
+  height: 6px;
+}
+
+.insertion-modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #27272a;
+  padding-top: 10px;
+}
+
+.insertion-status-summary {
+  font-size: 11.5px;
+  color: #a1a1aa;
+}
+
+.insertion-dismiss-btn {
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: #27272a;
+  color: #f4f4f5;
+  border: 1px solid #3f3f46;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.insertion-dismiss-btn:hover {
+  background: #3f3f46;
+}

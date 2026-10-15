@@ -1,0 +1,137 @@
+/* Application palette, shared dimensions and local theme surfaces. */
+:root {
+  /* Pepper Base (Obsidian & Charcoal) */
+  --bg-deep: #0a0b0e;
+  --bg-surface: #121318;
+  --bg-elevated: #1a1b22;
+  --bg-subtle: #22242c;
+  --bg-active: #2d2f3a;
+
+  /* Salt Values (Chalk, Silver & Pure White) */
+  --salt-pure: #ffffff;
+  --salt-chalk: #f4f4f5;
+  --salt-silver: #d4d4d8;
+  --salt-muted: #a1a1aa;
+  --salt-dim: #71717a;
+  --salt-faint: #52525b;
+
+  /* Structural Borders */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.16);
+  --border-strong: rgba(255, 255, 255, 0.32);
+  --border-salt: rgba(255, 255, 255, 0.7);
+
+  /* Shadows & Highlights */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.8);
+  --shadow-salt-glow: 0 0 16px rgba(255, 255, 255, 0.15);
+
+  /* Fonts */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, Menlo, Consolas, monospace;
+
+  /* Layout */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+}
+
+:root {
+  /* Recurring surface colors; theme scopes below select their meaning. */
+  --color-zinc-50: #fafafa;
+  --color-input-bg: #121215;
+  --color-zinc-800: #27272a;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-600: #52525b;
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-800: #1e293b;
+  --color-sky-600: #0284c7;
+  --color-success: #34d399;
+  --color-success-border: #10b981;
+  --color-success-bg: rgba(16, 185, 129, 0.15);
+  --color-success-line: rgba(16, 185, 129, 0.4);
+  --color-error: #f87171;
+  --color-error-bg: rgba(239, 68, 68, 0.15);
+  --color-error-line: rgba(239, 68, 68, 0.4);
+  --color-warning: #fbbf24;
+  --color-warning-bg: rgba(245, 158, 11, 0.15);
+  --color-warning-line: rgba(245, 158, 11, 0.4);
+  --color-info: #38bdf8;
+  --color-info-bg: rgba(56, 189, 248, 0.15);
+  --color-info-line: rgba(56, 189, 248, 0.4);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-tight: 6px;
+  --space-control: 10px;
+  --text-xs: 11px;
+  --text-sm: 12px;
+  --text-base: 13px;
+  --text-body: 14px;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --border-default: 1px solid var(--border-medium);
+  --border-control: 1px solid var(--border-strong);
+  --border-divider: 1px solid var(--border-subtle);
+  --transition-fast: all 0.15s ease;
+  --transition-normal: all 0.2s ease;
+  --duration-switch: 0.25s;
+  --radius-switch: 24px;
+  --radius-control: 6px;
+}
+
+:root,
+.theme-dark {
+  --focus-ring: var(--salt-pure);
+  --theme-bg-surface: #18181b;
+  --theme-bg-elevated: var(--color-zinc-800);
+  --theme-bg-subtle: #121215;
+  --theme-bg-card: #111114;
+  --theme-border: var(--color-zinc-800);
+  --theme-border-subtle: var(--color-zinc-700);
+  --theme-border-strong: var(--color-zinc-600);
+  --theme-text-primary: var(--color-zinc-50);
+  --theme-text-secondary: var(--salt-silver);
+  --theme-text-muted: var(--salt-muted);
+  
+  /* Badges & Pills */
+  --theme-badge-bg: var(--color-zinc-800);
+  --theme-badge-text: var(--salt-silver);
+  --theme-badge-border: var(--color-zinc-700);
+  --theme-pill-bg: var(--color-zinc-800);
+  --theme-pill-text: var(--color-zinc-50);
+  --theme-pill-border: var(--color-zinc-700);
+  --theme-socket-border: var(--color-zinc-600);
+}
+
+.theme-light {
+  --focus-ring: var(--color-sky-600);
+  --theme-bg-surface: var(--salt-pure);
+  --theme-bg-elevated: var(--color-slate-50);
+  --theme-bg-subtle: var(--color-slate-100);
+  --theme-bg-card: var(--color-slate-50);
+  --theme-border: var(--color-slate-300);
+  --theme-border-subtle: var(--color-slate-200);
+  --theme-border-strong: #94a3b8;
+  --theme-text-primary: #0f172a;
+  --theme-text-secondary: var(--color-slate-800);
+  --theme-text-muted: #334155;
+  
+  /* Badges & Pills */
+  --theme-badge-bg: var(--color-slate-200);
+  --theme-badge-text: var(--color-slate-800);
+  --theme-badge-border: var(--color-slate-300);
+  --theme-pill-bg: #fef3c7;
+  --theme-pill-text: #b45309;
+  --theme-pill-border: #fde68a;
+  --theme-socket-border: #f59e0b;
+}

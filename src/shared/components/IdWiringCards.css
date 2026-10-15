@@ -1,0 +1,161 @@
+/* Individual Instance Wire Card */
+
+.id-wire-card {
+  background: var(--bg-deep);
+  border: 1px solid var(--inst-border, var(--border-medium));
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.id-wire-card.card-has-focus {
+  border-color: var(--inst-color, var(--salt-pure)) !important;
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.12), inset 0 0 20px var(--inst-bg);
+}
+
+.id-wire-card.card-collision {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 14px rgba(239, 68, 68, 0.25);
+}
+
+.wire-theme-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-size: 10.5px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  background: var(--inst-bg);
+  border: 1px solid var(--inst-border);
+  color: var(--inst-color);
+}
+
+.wire-card-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--salt-pure);
+}
+
+.wire-card-badges {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.wire-counter-badge {
+  font-size: 10.5px;
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--salt-silver);
+  font-family: var(--font-mono);
+}
+
+.wire-focus-badge {
+  font-size: 10.5px;
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  color: #86efac;
+  font-weight: 600;
+}
+
+.wire-alert-badge {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  background: rgba(239, 68, 68, 0.18);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  color: #fca5a5;
+  font-weight: 700;
+}
+
+/* Central Hub Node */
+
+.wire-hub-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.wire-hub-chip {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--inst-bg);
+  border: 1.5px solid var(--inst-color);
+  color: var(--salt-pure);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 13px;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  user-select: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.wire-hub-chip:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 0 14px var(--inst-color);
+}
+
+.wire-hub-chip.hub-pulsing {
+  animation: hubPulseGlow 0.9s infinite alternate;
+}
+
+@keyframes hubPulseGlow {
+  0% {
+    box-shadow: 0 0 8px var(--inst-color);
+    transform: scale(1);
+  }
+
+  100% {
+    box-shadow: 0 0 22px var(--inst-color), inset 0 0 8px var(--inst-color);
+    transform: scale(1.04);
+  }
+}
+
+.hub-pulse-indicator {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--inst-color);
+  box-shadow: 0 0 6px var(--inst-color);
+}
+
+.hub-shape-icon {
+  color: var(--inst-color);
+  font-size: 11px;
+}
+
+.hub-id-text {
+  letter-spacing: 0.04em;
+}
+
+.hub-pulse-hint {
+  font-size: 9.5px;
+  color: var(--salt-muted);
+  font-weight: 500;
+  padding-left: 4px;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.wire-hub-caption {
+  font-size: 10.5px;
+  color: var(--salt-dim);
+  text-align: center;
+}

@@ -1,0 +1,183 @@
+/* =========================================================================
+   USEINSERTIONEFFECT PLAYGROUND STYLES
+   ========================================================================= */
+
+.insertion-playground-root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+/* 2 Small Buttons at the Top */
+
+.insertion-top-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.insertion-small-btn {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.insertion-btn-primary {
+  background: #27272a;
+  color: #f4f4f5;
+  border-color: #3f3f46;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.insertion-btn-primary:hover:not(:disabled) {
+  background: #3f3f46;
+  border-color: #52525b;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.insertion-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.insertion-btn-reset {
+  background: #18181b;
+  color: #a1a1aa;
+  border: 1px solid #27272a;
+}
+
+.insertion-btn-reset:hover {
+  background: #27272a;
+  color: #f4f4f5;
+  border-color: #3f3f46;
+}
+
+/* Default 1-line Explanation */
+
+.insertion-one-line-explanation {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #a1a1aa;
+  background: #111114;
+  border: 1px solid #27272a;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-family: inherit;
+}
+
+/* Sandbox Live Surface - Solid Black and Grey Palette */
+
+.insertion-sandbox-surface {
+  background: #09090b;
+  border: 1px solid #27272a;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #e4e4e7;
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.theme-status-tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: #18181b;
+  color: #e4e4e7;
+  border: 1px solid #3f3f46;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.theme-source-pill {
+  font-size: 11px;
+  color: #71717a;
+  font-family: monospace;
+}
+
+.insertion-preview-inner {
+  background: #121215;
+  border: 1px dashed #27272a;
+  border-radius: 8px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background-color 0.35s ease, border-color 0.35s ease;
+}
+
+.sandbox-display-heading {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fafafa;
+}
+
+.sandbox-display-body {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #a1a1aa;
+}
+
+.insertion-props-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.prop-box {
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 6px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.prop-label {
+  font-size: 11px;
+  color: #71717a;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.prop-value {
+  font-size: 12.5px;
+  font-family: monospace;
+  color: #e4e4e7;
+  font-weight: 500;
+}
+
+.insertion-theme-active .prop-box {
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+}
+
+.insertion-theme-active .prop-label {
+  color: #71717a;
+}
+
+.insertion-theme-active .prop-value {
+  color: #18181b;
+  font-family: Georgia, serif;
+}

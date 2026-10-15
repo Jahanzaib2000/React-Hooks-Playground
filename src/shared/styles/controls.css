@@ -1,0 +1,192 @@
+/* Recurring lesson and action controls; keep demo-specific layouts local. */
+.lesson-selector,
+.wire-card-identity,
+.context-box-title-row,
+.submissions-title-row,
+.ue-popup-tag-row,
+.udv-app-brand,
+.uee-toggle-button-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.lesson-dropdown {
+  background: var(--bg-deep);
+  color: var(--salt-chalk);
+  border: var(--border-divider);
+  padding: var(--space-tight) var(--space-3);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-base);
+  font-family: var(--font-sans);
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.lesson-dropdown:focus {
+  border-color: var(--border-salt);
+}
+
+.lesson-btn-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-tight);
+  flex-wrap: wrap;
+}
+
+.lesson-btn {
+  background: var(--bg-deep);
+  color: var(--salt-muted);
+  border: var(--border-divider);
+  padding: 5px var(--space-3);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  font-family: var(--font-sans);
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition-fast);
+  white-space: nowrap;
+}
+
+.lesson-btn:hover:not(:disabled):not(.active) {
+  background: var(--bg-surface);
+  color: var(--salt-chalk);
+  border-color: var(--border-medium);
+}
+
+.lesson-btn.active {
+  background: var(--bg-surface);
+  color: var(--salt-chalk);
+  border-color: var(--salt-pure);
+  font-weight: var(--weight-semibold);
+  box-shadow: var(--shadow-sm);
+}
+
+.theory-btn {
+  background: var(--bg-deep);
+  color: var(--salt-silver);
+  border: var(--border-default);
+  padding: var(--space-tight) 14px;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: var(--space-tight);
+}
+
+.theory-btn:hover:not(:disabled) {
+  background: var(--bg-subtle);
+  color: var(--salt-pure);
+  border-color: var(--border-salt);
+}
+
+.salt-btn,
+.pepper-btn {
+  flex: 1;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  padding: var(--space-control) var(--space-4);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  background: var(--button-background, var(--salt-pure));
+  color: var(--button-color, var(--bg-deep));
+  border: var(--button-border, none);
+  font-weight: var(--button-weight, var(--weight-semibold));
+}
+
+.salt-btn {
+  box-shadow: var(--shadow-sm);
+}
+
+.salt-btn:hover:not(:disabled) {
+  background: var(--salt-chalk);
+  transform: translateY(-1px);
+}
+
+.salt-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.pepper-btn {
+  --button-background: var(--bg-deep);
+  --button-color: var(--salt-chalk);
+  --button-border: var(--border-default);
+  --button-weight: var(--weight-medium);
+}
+
+.pepper-btn:hover:not(:disabled) {
+  background: var(--bg-subtle);
+  border-color: var(--border-salt);
+  color: var(--salt-pure);
+}
+
+/* Shared controls expose keyboard focus without changing pointer-only views. */
+
+:where(.salt-btn, .pepper-btn, .theory-btn, .lesson-btn, .hook-tab-btn, .token-pill, .tab-link, .tree-pass-btn, .tree-switch-theme-btn, .uas-text-input, .us-state-text-input):focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+:where(.salt-btn, .pepper-btn, .theory-btn, .lesson-btn):disabled {
+  opacity: var(--button-disabled-opacity, 0.5);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Shared input surface; state text keeps its larger padding and text size. */
+
+.uas-text-input,
+.us-state-text-input {
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-zinc-800);
+  border-radius: var(--radius-control);
+  font-family: inherit;
+  color: var(--color-zinc-50);
+  outline: none;
+  box-sizing: border-box;
+  padding: var(--field-padding, var(--space-2) var(--space-3));
+  font-size: var(--field-font-size, 13.5px);
+}
+
+.uas-text-input:focus,
+.us-state-text-input:focus {
+  border-color: var(--color-zinc-600);
+}
+
+.ue-popup-header,
+.useses-node-header,
+.uas-popup-header,
+.us-const-popup-header,
+.use-simulation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #27272a;
+  padding-bottom: 8px;
+}
+
+.ue-popup-footer,
+.uas-popup-footer,
+.us-const-popup-footer,
+.use-sim-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #27272a;
+  padding-top: 8px;
+}
+
+.ue-popup-message,
+.uas-popup-message {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fafafa;
+  margin: 0;
+  line-height: 1.4;
+}

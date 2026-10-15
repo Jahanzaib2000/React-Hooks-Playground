@@ -1,0 +1,103 @@
+/* Accessible Form Field (Lesson 2) */
+
+.uid-a11y-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.uid-a11y-id-namespace {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.uid-a11y-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--salt-chalk);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.15s;
+}
+
+.uid-a11y-label:hover {
+  color: var(--salt-pure);
+}
+
+.uid-attr-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-active);
+  border: 1px solid var(--border-subtle);
+  color: var(--salt-muted);
+  white-space: nowrap;
+}
+
+.uid-a11y-input {
+  background: var(--bg-deep);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: var(--font-sans);
+  color: var(--salt-chalk);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.uid-a11y-input:focus {
+  border-color: var(--salt-pure);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.12);
+}
+
+.uid-a11y-input::placeholder {
+  color: var(--salt-faint);
+}
+
+.uid-attr-readout {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--salt-dim);
+  padding: 4px 8px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.uid-attr-value {
+  color: var(--salt-pure);
+  font-weight: 600;
+}
+
+.uid-a11y-hint {
+  font-size: 12px;
+  color: var(--salt-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.uid-a11y-error {
+  font-size: 12px;
+  font-weight: 600;
+  color: #fca5a5;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  background: rgba(80, 20, 20, 0.3);
+  border: 1px solid rgba(255, 100, 100, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: uidCardIn 0.15s ease-out;
+}

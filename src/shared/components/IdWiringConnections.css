@@ -1,0 +1,172 @@
+/* SVG Wires Layer */
+
+.wire-diagram-container {
+  width: 100%;
+  height: 38px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active-pulse-wire {
+  stroke-dasharray: 6 3;
+  animation: wireDashFlow 0.6s linear infinite;
+  filter: drop-shadow(0 0 4px var(--inst-color));
+}
+
+@keyframes wireDashFlow {
+  from {
+    stroke-dashoffset: 18;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.pulse-bead {
+  animation: beadPulse 0.45s ease-out infinite alternate;
+  filter: drop-shadow(0 0 6px #ffffff);
+}
+
+@keyframes beadPulse {
+  0% {
+    r: 2.5;
+    opacity: 0.7;
+  }
+
+  100% {
+    r: 4.5;
+    opacity: 1;
+  }
+}
+
+/* Target Attributes Slots Row */
+
+.wire-attributes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 8px;
+}
+
+.wire-attr-slot {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  transition: all 0.15s ease;
+  cursor: default;
+}
+
+.wire-attr-slot:hover,
+.wire-attr-slot.slot-hovered {
+  border-color: var(--inst-color);
+  background: var(--bg-elevated);
+  box-shadow: 0 0 10px var(--inst-bg);
+}
+
+.wire-attr-slot.slot-pulsing {
+  border-color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 0 14px var(--inst-color) !important;
+  transform: translateY(-2px);
+}
+
+.wire-attr-slot.slot-broken {
+  border-color: rgba(239, 68, 68, 0.45);
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.slot-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+.slot-order {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--salt-dim);
+}
+
+.slot-tag {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--salt-silver);
+  background: var(--bg-deep);
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+.slot-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px currentColor;
+}
+
+.slot-code {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slot-attr-name {
+  color: var(--salt-dim);
+}
+
+.slot-attr-val {
+  color: var(--salt-pure);
+  font-weight: 700;
+}
+
+.slot-desc {
+  font-size: 9.5px;
+  color: var(--salt-dim);
+  line-height: 1.3;
+  margin-top: 2px;
+}
+
+/* Proof Step Button */
+
+.wire-card-footer {
+  margin-top: 4px;
+  display: flex;
+}
+
+.proof-test-btn {
+  width: 100%;
+  padding: 7px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  color: var(--salt-pure);
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  transition: all 0.15s ease;
+}
+
+.proof-test-btn:hover {
+  background: var(--bg-elevated);
+  border-color: var(--inst-color, var(--salt-pure));
+  box-shadow: 0 0 10px var(--inst-bg);
+}
+
+.proof-btn-sub {
+  font-size: 10px;
+  color: var(--salt-dim);
+  font-weight: 400;
+}

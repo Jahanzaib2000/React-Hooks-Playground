@@ -1,0 +1,153 @@
+/* ==========================================================================
+   USEDEBUGVALUE PLAYGROUND: FULL-WIDTH SANDBOX & DEVTOOLS VISUAL
+   ========================================================================== */
+
+.workspace-grid.debug-value-workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.debug-value-sandbox-pane {
+  width: 100%;
+}
+
+.debug-value-sandbox-pane .panel-card {
+  width: 100%;
+}
+
+.debug-value-code-pane {
+  width: 100%;
+}
+
+.debug-value-code-pane .panel-card {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+}
+
+/* Root & Visual Arena */
+
+.udv-sandbox-root {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.udv-visual-arena {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Headers */
+
+.udv-panel-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #141417;
+  border-bottom: 1px solid #27272a;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.udv-panel-role-tag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.udv-panel-role-tag.app-role {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fafafa;
+  border: 1px solid #3f3f46;
+}
+
+.udv-panel-role-tag.devtools-role {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.udv-panel-badge-sub {
+  font-size: 10px;
+  color: #71717a;
+  font-family: var(--font-mono);
+}
+
+/* Left App Column */
+
+.udv-app-column {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: #0f0f11;
+  border: 1px solid #27272a;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.udv-app-window {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #121215;
+  padding: 16px;
+  gap: 16px;
+}
+
+.udv-app-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: var(--radius-sm);
+}
+
+.udv-app-logo-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fafafa;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.udv-app-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fafafa;
+}
+
+.udv-nav-item {
+  font-size: 11px;
+  color: #71717a;
+  font-weight: 500;
+}
+
+.udv-nav-item.active {
+  color: #fafafa;
+  font-weight: 600;
+}
+
+.udv-nav-cart-badge {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  background: #27272a;
+  padding: 2px 7px;
+  border-radius: 12px;
+  color: #fafafa;
+  border: 1px solid #3f3f46;
+}

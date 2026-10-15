@@ -1,0 +1,24 @@
+export const HEADER_HOOK_GROUPS = [
+  [
+    "useState",
+    "useEffect",
+    "useId",
+    "useOptimistic",
+    "useDeferredValue",
+    "useTransition",
+    "useRef",
+    "useReducer",
+    "useContext",
+    "useImperativeHandle",
+    "useFormStatus",
+    "useLayoutEffect"
+  ],
+  [
+    "useInsertionEffect",
+    "useSyncExternalStore",
+    "useActionState",
+    "use",
+    "useDebugValue",
+    "useEffectEvent"
+  ]
+];

@@ -1,0 +1,72 @@
+/* Block 3: Paused Hatched Bar & Arrow Banner */
+
+.use-hatched-paused-block {
+  background: repeating-linear-gradient(
+    -45deg,
+    #18181b,
+    #18181b 10px,
+    #242428 10px,
+    #242428 20px
+  );
+  border: 1px dashed #52525b;
+}
+
+.use-hatched-paused-block.block-active {
+  border: 1px solid #fafafa;
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.16);
+}
+
+.use-badge-arrow-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(18, 18, 21, 0.9);
+  padding: 3px 7px;
+  border-radius: 4px;
+  border: 1px solid #3f3f46;
+}
+
+.use-arrow-glyph {
+  font-size: 11px;
+  color: #fafafa;
+  font-weight: 700;
+}
+
+.use-arrow-text {
+  font-size: 11px;
+  font-weight: 600;
+  color: #fafafa;
+}
+
+.use-pause-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(24, 24, 27, 0.9);
+  border: 1px solid #3f3f46;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.use-pause-icon {
+  font-size: 10px;
+  color: #fbbf24;
+}
+
+.use-pause-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #fafafa;
+}
+
+.use-distinctive-callout {
+  font-size: 11px;
+  font-style: italic;
+  color: #d4d4d8;
+  background: rgba(9, 9, 11, 0.85);
+  border-left: 2px solid #fafafa;
+  padding: 3px 8px;
+  border-radius: 0 4px 4px 0;
+  margin-top: auto;
+  line-height: 1.3;
+}

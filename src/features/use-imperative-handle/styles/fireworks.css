@@ -1,0 +1,100 @@
+/* 2-Second Fireworks Particle Overlay & Physics Animation */
+
+.fireworks-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.fireworks-core {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: coreFlash2s 2.0s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.fireworks-red .fireworks-core {
+  background: #ef4444;
+  box-shadow: 0 0 24px #ef4444, 0 0 48px #f87171;
+}
+
+.fireworks-blue .fireworks-core {
+  background: #fafafa;
+  box-shadow: 0 0 24px #fafafa, 0 0 48px #a1a1aa;
+}
+
+@keyframes coreFlash2s {
+  0% {
+    transform: scale(0.2);
+    opacity: 1;
+  }
+
+  15% {
+    transform: scale(2.2);
+    opacity: 1;
+    filter: brightness(2);
+  }
+
+  35% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.firework-spark {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: fireworkBurst2s 2.0s cubic-bezier(0.12, 0.8, 0.32, 1) forwards;
+  animation-delay: var(--spark-delay, 0s);
+}
+
+.spark-red {
+  background: radial-gradient(circle, #fecaca 10%, #ef4444 70%, #b91c1c 100%);
+  box-shadow: 0 0 10px #ef4444, 0 0 20px rgba(239, 68, 68, 0.6);
+}
+
+.spark-blue {
+  background: radial-gradient(circle, #ffffff 10%, #d4d4d8 70%, #71717a 100%);
+  box-shadow: 0 0 10px #ffffff, 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+@keyframes fireworkBurst2s {
+  0% {
+    transform: translate(0, 0) scale(0.3);
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1.6);
+  }
+
+  30% {
+    opacity: 1;
+    transform: rotate(var(--spark-angle)) translateX(calc(var(--spark-dist) * 0.7)) scale(1.3);
+  }
+
+  75% {
+    opacity: 0.85;
+    transform: rotate(var(--spark-angle)) translateX(var(--spark-dist)) translateY(14px) scale(0.9);
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(var(--spark-angle)) translateX(calc(var(--spark-dist) * 1.25)) translateY(32px) scale(0);
+  }
+}

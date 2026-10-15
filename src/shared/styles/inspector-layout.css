@@ -1,0 +1,15 @@
+/* Bottom Dock: DOM Changes & Hook Tree */
+
+.bottom-dock {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  height: 260px;
+  min-height: 260px;
+  max-height: 260px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}

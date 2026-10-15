@@ -1,0 +1,192 @@
+/* =========================================================================
+   USECONTEXT THEME PLAYGROUND: 4 BOXES HIERARCHY + SIDE BROADCAST HUB
+   ========================================================================= */
+
+.context-playground-root {
+  display: flex;
+  gap: 28px;
+  width: 100%;
+  position: relative;
+  align-items: flex-start;
+  min-height: 580px;
+}
+
+.context-boxes-column {
+  flex: 1 1 58%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.context-side-column {
+  flex: 1 1 38%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  align-self: stretch;
+}
+
+.context-box-item {
+  width: 100%;
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--theme-bg-surface);
+  border: 1px solid var(--theme-border);
+  color: var(--theme-text-primary);
+  box-shadow: none;
+}
+
+.context-box-item .context-box-name {
+  color: var(--theme-text-primary);
+}
+
+.context-box-item .context-box-desc {
+  color: var(--theme-text-muted);
+}
+
+.context-box-item .box-number-badge {
+  background: var(--theme-badge-bg);
+  color: var(--theme-badge-text);
+  border: 1px solid var(--theme-badge-border);
+}
+
+.context-box-item .prop-status-tag {
+  background: var(--theme-bg-subtle);
+  color: var(--theme-text-muted);
+  border: 1px solid var(--theme-border);
+}
+
+.context-box-item .theme-pill-badge {
+  background: var(--theme-pill-bg);
+  color: var(--theme-pill-text);
+  border: 1px solid var(--theme-pill-border);
+  box-shadow: none;
+}
+
+/* Sockets on the boxes */
+
+.context-box-socket {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 5;
+  transition: all 0.25s ease;
+  background: var(--theme-bg-surface);
+  border: 2px solid var(--theme-socket-border);
+}
+
+.context-box-socket.socket-top {
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.context-box-socket.socket-bottom {
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.context-box-socket.socket-right {
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Header & Typography */
+
+.context-box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.box-number-badge {
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.context-box-name {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.context-box-desc {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.prop-status-tag {
+  font-size: 10px;
+  padding: 4px 8px;
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+}
+
+.prop-tag-glyph {
+  font-size: 11px;
+}
+
+/* Prop Drill Button in Box 1 */
+
+.box-control-row {
+  margin-top: 4px;
+}
+
+.prop-drill-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #27272a;
+  border: 1px solid #3f3f46;
+  border-radius: var(--radius-sm);
+  color: #fafafa;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.prop-drill-btn:hover:not(:disabled) {
+  background: #3f3f46;
+  color: #ffffff;
+  border-color: #52525b;
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.prop-drill-btn:disabled,
+.context-switch-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.drill-btn-icon {
+  font-size: 13px;
+}

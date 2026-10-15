@@ -1,0 +1,147 @@
+/* Profile Card & Inspection Blueprint Ring */
+
+.udv-profile-card-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 4px 0;
+}
+
+.udv-inspection-ring {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  padding: 14px;
+  border: 1.5px dashed #52525b;
+  border-radius: var(--radius-md);
+  background: rgba(24, 24, 27, 0.6);
+  transition: all 0.2s ease;
+}
+
+.udv-inspection-tab-badge {
+  position: absolute;
+  top: -10px;
+  left: 14px;
+  background: #27272a;
+  border: 1px solid #52525b;
+  padding: 1px 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: #fafafa;
+  font-weight: 600;
+}
+
+.udv-inspection-selected-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 6px rgba(56, 189, 248, 0.8);
+}
+
+.udv-profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px;
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: var(--radius-sm);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.udv-profile-card.theme-light {
+  background: #27272a;
+  border-color: #3f3f46;
+}
+
+.udv-avatar-circle {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #27272a;
+  border: 1.5px solid #3f3f46;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fafafa;
+}
+
+.udv-avatar-status-pip {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1.5px solid #18181b;
+  background: #71717a;
+  transition: background 0.2s ease;
+}
+
+.udv-avatar-status-pip.online {
+  background: #22c55e;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.6);
+}
+
+.udv-avatar-status-pip.offline {
+  background: #ef4444;
+}
+
+.udv-user-name {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fafafa;
+}
+
+.udv-user-role {
+  margin: 0;
+  font-size: 11px;
+  color: #a1a1aa;
+}
+
+.udv-card-chips-row,
+.udv-actions-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.udv-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-family: var(--font-mono);
+  background: #202024;
+  border: 1px solid #2e2e33;
+  color: #d4d4d8;
+}
+
+.udv-chip-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.udv-chip.chip-status.online {
+  color: #22c55e;
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.udv-chip.chip-status.offline {
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.3);
+}

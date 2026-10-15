@@ -1,0 +1,68 @@
+/* Controls */
+
+.udv-interactive-actions-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #141417;
+  padding: 10px 12px;
+  border: 1px solid #27272a;
+  border-radius: var(--radius-sm);
+}
+
+.udv-actions-title {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #71717a;
+  letter-spacing: 0.04em;
+}
+
+.udv-action-btn {
+  background: #1f1f23;
+  border: 1px solid #3f3f46;
+  color: #fafafa;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.udv-action-btn:hover {
+  background: #27272a;
+  border-color: #71717a;
+}
+
+.udv-action-btn.small {
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.udv-action-btn.reset {
+  margin-left: auto;
+  font-size: 13px;
+  padding: 4px 9px;
+  background: #27272a;
+  border-color: #52525b;
+}
+
+.udv-cart-stepper-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: var(--radius-sm);
+  padding: 2px 4px;
+}
+
+.udv-cart-stepper-val {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: #fafafa;
+  padding: 0 4px;
+}

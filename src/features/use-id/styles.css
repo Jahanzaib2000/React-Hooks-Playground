@@ -1,0 +1,159 @@
+/* ==========================================================================
+   useId Playground Components
+   ========================================================================== */
+
+/* Instance Grid (Lesson 1) */
+
+.uid-instances-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+  width: 100%;
+}
+
+.uid-instance-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.2s ease;
+  animation: uidCardIn 0.2s ease-out;
+}
+
+@keyframes uidCardIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.uid-instance-card:hover {
+  border-color: var(--border-strong);
+  background: var(--bg-active);
+}
+
+.uid-instance-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.uid-instance-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--salt-muted);
+}
+
+.uid-id-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: var(--bg-deep);
+  border: 1px solid var(--border-medium);
+  color: var(--salt-pure);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.uid-id-badge.duplicate {
+  border-color: rgba(255, 100, 100, 0.5);
+  background: rgba(80, 20, 20, 0.3);
+  color: #fca5a5;
+}
+
+.uid-id-badge.unstable {
+  border-color: rgba(255, 180, 50, 0.5);
+  background: rgba(80, 60, 10, 0.3);
+  color: #fbbf24;
+}
+
+.uid-field-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.uid-form-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--salt-silver);
+  cursor: pointer;
+}
+
+.uid-form-label:hover {
+  color: var(--salt-pure);
+}
+
+.uid-form-input {
+  background: var(--bg-deep);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  font-size: 12px;
+  font-family: var(--font-sans);
+  color: var(--salt-chalk);
+  outline: none;
+  transition: border-color 0.15s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.uid-form-input:focus {
+  border-color: var(--border-salt);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.uid-form-input::placeholder {
+  color: var(--salt-faint);
+}
+
+.uid-warning-pill {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  background: rgba(80, 20, 20, 0.3);
+  border: 1px solid rgba(255, 100, 100, 0.3);
+  color: #fca5a5;
+}
+
+.uid-warning-pill.unstable {
+  background: rgba(80, 60, 10, 0.3);
+  border-color: rgba(255, 180, 50, 0.3);
+  color: #fbbf24;
+}
+
+.uid-success-pill {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  background: rgba(20, 60, 20, 0.3);
+  border: 1px solid rgba(60, 180, 80, 0.3);
+  color: #86efac;
+  margin-top: 8px;
+  animation: fadeInPill 0.2s ease-out;
+}
+
+.uid-summary-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid var(--border-subtle);
+}

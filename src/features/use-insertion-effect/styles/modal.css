@@ -1,0 +1,89 @@
+/* Modal Popup - Scoped over the sandbox card without background blur */
+
+.insertion-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(9, 9, 11, 0.85);
+  /* strictly no blur: does not blur background */
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 10px;
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.insertion-modal-card {
+  background: #121215;
+  border: 1.5px solid #27272a;
+  border-radius: 12px;
+  width: 95%;
+  max-width: 500px;
+  padding: 16px 20px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: modalScaleUp 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalScaleUp {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.insertion-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #27272a;
+  padding-bottom: 8px;
+}
+
+.insertion-modal-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fafafa;
+}
+
+.insertion-modal-subtitle {
+  margin: 3px 0 0 0;
+  font-size: 11.5px;
+  color: #a1a1aa;
+}
+
+.insertion-modal-close-icon {
+  background: transparent;
+  border: none;
+  color: #a1a1aa;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.insertion-modal-close-icon:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
